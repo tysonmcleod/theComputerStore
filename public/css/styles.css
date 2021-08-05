@@ -1,1 +1,126 @@
- 
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  
+  body, html {
+    height: 100%;
+    background-color:#ffffff;
+    overflow: hidden;
+  }
+    
+    h1 {
+      color: rgb(0, 0, 0);
+      text-align: center;
+    }
+    
+    p {
+      font-family: verdana;
+      font-size: 20px;
+    }
+  
+  
+   /* Nav bar */
+  
+   #navigationbar{
+      height: 1%;
+      padding: 5%;
+      background-color: #f1f0f0;
+      margin-bottom: 5%;
+    
+   }
+  
+   /* container */
+  
+  #container{
+    width: 100%;
+    height: 70%;
+    padding: 30px;
+    white-space:nowrap;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;  
+  }
+  
+  
+  
+  /* content-top */
+  #content-top{
+    text-align: center;
+    border: 2px solid #000000;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    height: 40%;
+    display: flex;
+    padding:1%;
+  }
+  
+  .box{
+    background-color: cadetblue;
+    width: 30%;
+    height: 50%;
+    display: inline-block;
+    margin: 10px 10px;
+    flex: 1;
+    border-radius: 5px;
+  }
+  
+  
+  
+   
+  /* Profile (left)*/
+  
+  #balance{
+    color:#0a2904;
+  }
+  
+  
+  
+  /* Laptops (right) */
+  
+  
+  
+  
+  /* Work / Bank (centre) */
+  
+  
+  
+  
+  
+  /* content-bottom */
+  #content-bottom{
+    text-align: center;
+    border: 2px solid #000000;
+    height: 40%;
+    width: auto;
+    padding-right: 50px;
+  }
+  
+  
+  .bigBox{
+    background-color: cadetblue;
+    width: 80%;
+    height: 50%;
+    display: inline-block;
+    margin: 10px 10px;
+    flex: 1;
+    border-radius: 5px;
+  }
+  
+  /* Laptop display*/
+  
+  #laptopImg{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 10%;
+    height: 10%;
+   
+  }
+  
+  
