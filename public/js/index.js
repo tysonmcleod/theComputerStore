@@ -1,5 +1,8 @@
+const baseUrl = "https://noroff-komputer-store-api.herokuapp.com/";
+const compUrl ="https://noroff-komputer-store-api.herokuapp.com/computers"; 
+
 // top left
-let balanceElement = document.getElementById("balance");
+const balanceElement = document.getElementById("balance");
 const getLoanElement = document.getElementById("getLoan");
 const loanDueElement = document.getElementById("loanDue");
 const outstandingLoanElement = document.getElementById("outstandingLoan");
@@ -36,18 +39,15 @@ const user = {
     workPay: 0.0
 }
 
-console.log(user);
-
-
 let laptops = [];
 
 // start script onload
-window.onload = function startScript(){
-    fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
+window.onload =  function startScript(){
+    fetch(compUrl)
     .then(response => response.json())
     .then(data => laptops = data)
     .then(laptops => addLaptopsToMenu(laptops))
-    
+    .catch(error => console.log('error: ', error));
 }
 
 
@@ -57,7 +57,7 @@ const addLaptopsToMenu = (laptops) => {
     laptopTitleElement.innerText = laptop[0].title;
     laptopSpecsElement.innerText = laptop[0].specs[3];
     laptopPriceBottomElement.innerText = laptop[0].price;
-    laptopImgElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + laptop[0].image;
+    laptopImgElement.src = baseUrl + laptop[0].image;
 
 }
 
@@ -78,15 +78,15 @@ const handleLaptopMenuChange = e => {
     buyLaptopElement.style.display = "inline-block";
     laptopSpecsElement.innerText = selectedLaptop.specs[3] + "\n" + selectedLaptop.specs[0] + "\n" + selectedLaptop.specs[2];
     laptopTitleElement.innerText = selectedLaptop.title;
-    laptopPriceBottomElement.innerText = selectedLaptop.price;
+    laptopPriceBottomElement.innerText = selectedLaptop.price + "kr";
     laptopDescriptionElement.innerText = selectedLaptop.description;
-    const laptopUrl = "https://noroff-komputer-store-api.herokuapp.com/" + selectedLaptop.image;
+    const laptopUrl = baseUrl + selectedLaptop.image;
     fetch(laptopUrl)
     .then(response => {
         if(response.ok){
             laptopImgElement.src = laptopUrl;
         }else{
-            laptopImgElement.src = "assets/images/goat.png";
+            laptopImgElement.src = "public/assets/images/goat.png";
         }
     })
     .catch(error => console.log('error: ', error));
@@ -98,7 +98,6 @@ const handleLaptopMenuChange = e => {
 // buy a pc
 const handleBuyPc = () => {
     const selectedLaptop = laptops[laptopsElement.selectedIndex];
-    console.log(selectedLaptop);
     if(user.accountBalance < selectedLaptop.price){
         alert("I don’t think you have the facilities for that, Big Man...");
     }else{
@@ -126,7 +125,6 @@ const handleLoan = () => {
             alert("this bank can only handle currency rounded to the nearest whole number");
         }else{
             if(loanAmount <= (user.accountBalance/2)){
-                console.log(typeof loanAmount);
                 alert("thanks for borrowing " + loanAmount + "kr" + " from our bank");
                 user.accountBalance+= loanAmount;
                 balanceElement.innerText = "Balance: " + user.accountBalance + "kr";
