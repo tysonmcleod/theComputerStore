@@ -1,32 +1,34 @@
+// url's used to get data 
+
 const baseUrl = "https://noroff-komputer-store-api.herokuapp.com/";
 const compUrl ="https://noroff-komputer-store-api.herokuapp.com/computers"; 
 
-// top left
+
+
+// select computer elements (top left in grid layout)  
+const laptopsElement = document.getElementById("laptops");
+const buyLaptopElement = document.getElementById("buyLaptop");
+const laptopSpecsElement = document.getElementById("specs");
+
+// show computer elements (top right in grid layout)
+const laptopTitleElement = document.getElementById("laptopTitle");
+const laptopPriceBottomElement = document.getElementById("laptopPrice");
+const laptopDescriptionElement = document.getElementById("laptopDescription");
+const laptopImgElement = document.getElementById("laptopImg");
+
+// show balance / bank  elements (bottom left in grid layout)
 const balanceElement = document.getElementById("balance");
 const getLoanElement = document.getElementById("getLoan");
 const loanDueElement = document.getElementById("loanDue");
 const outstandingLoanElement = document.getElementById("outstandingLoan");
 
-// top centre
+// work/pay elements (bottom right in grid layout)
 const payElement = document.getElementById("pay");
 const bankElement = document.getElementById("bank");
 const workElement = document.getElementById("work");
 const repayLoanElement = document.getElementById("repayLoan");
 const debtFromLoanElement = document.getElementById("debt");
 const repayLoanButtonElement = document.getElementById("repayLoanButton");
-
-// top right
-const laptopsElement = document.getElementById("laptops");
-const buyLaptopElement = document.getElementById("buyLaptop");
-const laptopSpecsElement = document.getElementById("specs");
-
-// bottom
-const laptopTitleElement = document.getElementById("laptopTitle");
-const laptopPriceBottomElement = document.getElementById("laptopPrice");
-const laptopDescriptionElement = document.getElementById("laptopDescription");
-const laptopImgElement = document.getElementById("laptopImg");
-
-
 
 // user 
 const user = {
@@ -259,7 +261,6 @@ const handleBankMoney = () => {
 }
 
 // work
-
 const handleWork = () => {
     user.workPay+=100;
     payElement.innerText = "Pay: " + user.workPay + "kr";
@@ -269,7 +270,6 @@ const handleWork = () => {
 
 
 // event listeners
-
 laptopsElement.addEventListener("change", handleLaptopMenuChange);
 buyLaptopElement.addEventListener("click", handleBuyPc);
 workElement.addEventListener("click", handleWork);

@@ -8,20 +8,18 @@
         <link rel="stylesheet" type="text/css" href="public/css/styles.css">
     </head>
 <body>
-
     <div class="container">
             <div id="navigationbar">
                 <h1> WorkBankBuyPcShop </h1>
             </div>
-
             <div class="row">
-                <div class="column" style="background-color: #FFE190">
+                <div class="column topleft">
                     <h3>Computers</h3>
                     <select id="laptops" name="laptops">
                     </select><br>
                     <p id="specs"></p>
                 </div>
-                <div class="column" style="background-color:#FFD970;">
+                <div class="column topright">
                     <div class="imgCard">
                         <img id="laptopImg" src="public/assets/images/goat.png" alt="LeBron James - the greatest player of all time">
                         <div class="laptopImgContainer">
@@ -30,19 +28,17 @@
                             <p id="laptopDescription"></p>
                             <button id="buyLaptop" style="display: none;" type="button">Buy now</button> 
                         </div>                    
-                    </div>
-                    
+                    </div>             
                 </div>
             </div>
-
             <div class="row">
-                <div class="column" style="background-color:#FFD151;">
+                <div class="column bottomleft">
                     <h3>Rich Bank</h3>
                     <p id="balance">Balance: 0kr</p>
                     <p id="outstandingLoan"></p>
                     <button id="getLoan"type="button">Get a loan</button> 
                 </div>
-                <div class="column" style="background-color:#FFEAAF;">
+                <div class="column bottomright">
                     <h3>Work</h3>
                     <p div id="pay"></p>
                     <button id="bank" type="button">Bank</button>    
@@ -50,12 +46,9 @@
                     <div id="repayLoan" style="display: none;">
                         <p id="debt"></p>
                         <button id="repayLoanButton" type="button">RepayLoan</button>
-                    </div>
-                    
+                    </div>            
                 </div>
-            </div>
-
-         
+            </div> 
     </div>
     <script src=public/js/index.js></script>
 </body>

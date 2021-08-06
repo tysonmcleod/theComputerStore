@@ -8,7 +8,7 @@
 /* body */ 
 .body{
   background: #f9f9f9;
-font-family: 'Courier New', monospace;
+  font-family: 'Courier New', monospace;
 }
 
 
@@ -45,6 +45,25 @@ font-family: 'Courier New', monospace;
   padding: 5px;
 }
 
+.topright{
+  background-color: #FFD151;
+}
+
+
+.topleft{
+  background-color: #FFEAAF;
+}
+
+
+.bottomright{
+  background-color: #FFE190;
+}
+
+
+.bottomleft{
+  background-color: #FFD970;
+}
+
 
 div.imgCard {
   width: 100%;
@@ -74,8 +93,6 @@ div.laptopImgContainer {
 .row{
   display: flex;
 }
-
-
 
 #navigationbar{ 
   font-family: 'Courier New', monospace;
