@@ -5,54 +5,57 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Meet local laptops 8km away</title>
-        <link rel="stylesheet" type="text/css" href="public/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="public/css/testStyles.css">
     </head>
 <body>
-    <div id="navigationbar">
-        <h1> WorkBankBuyPcShop </h1>
-    </div>
 
-    <div id="container">
-
-
-
-        <div id="content-top">
-            <div class="box">
-                <h3>Rich Bank</h3>
-                <p id="balance">Balance: 0kr</p>
-                <p id="outstandingLoan"></p>
-                <button id="getLoan"type="button">Get a loan</button>    
+    <div class="container">
+            <div id="navigationbar">
+                <h1> WorkBankBuyPcShop </h1>
             </div>
 
-            <div class="box">
-                <h3>Work</h3>
-                <p div id="pay"></p>
-                <div id="repayLoan" style="display: none;">
-                    <p id="debt"></p>
-                    <button id="repayLoanButton" type="button">RepayLoan</button>
-                </div>
-                <button id="bank" type="button">Bank</button>    
-                <button id="work" type="button" >Work</button>    
-            </div>
-
-            <div class="box">
-                <h3>Computers</h3>
+            <div class="row">
+                <div class="column" style="background-color: #FFE190">
+                    <h3>Computers</h3>
                     <select id="laptops" name="laptops">
                     </select><br>
-                    <h4 id="specs"></h4>
-                               
-            </div>      
-        </div>
-
-        <div id="content-bottom">
-            <div id="bixBox">
-                <img id="laptopImg" src="public/assets/images/goat.png" alt="LeBron James - the greatest player of all time">
-                <h1 id="laptopTitle">Welcome to our shop, please buy something.</h1>
-                <h3 id="laptopPrice"></h3>
-                <p id="laptopDescription"></p>
-                <button id="buyLaptop" style="display: none;" type="button">Buy now</button>    
+                    <p id="specs"></p>
+                </div>
+                <div class="column" style="background-color:#FFD970;">
+                    <div class="imgCard">
+                        <img id="laptopImg" src="public/assets/images/goat.png" alt="LeBron James - the greatest player of all time">
+                        <div class="laptopImgContainer">
+                            <h3 id="laptopTitle">Welcome to our shop, please buy something.</h3>
+                            <p id="laptopPrice"></p>
+                            <p id="laptopDescription"></p>
+                            <button id="buyLaptop" style="display: none;" type="button">Buy now</button> 
+                        </div>                    
+                    </div>
+                    
+                </div>
             </div>
-        </div>      
+
+            <div class="row">
+                <div class="column" style="background-color:#FFD151;">
+                    <h3>Rich Bank</h3>
+                    <p id="balance">Balance: 0kr</p>
+                    <p id="outstandingLoan"></p>
+                    <button id="getLoan"type="button">Get a loan</button> 
+                </div>
+                <div class="column" style="background-color:#FFEAAF;">
+                    <h3>Work</h3>
+                    <p div id="pay"></p>
+                    <button id="bank" type="button">Bank</button>    
+                    <button id="work" type="button" >Work</button>   
+                    <div id="repayLoan" style="display: none;">
+                        <p id="debt"></p>
+                        <button id="repayLoanButton" type="button">RepayLoan</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+         
     </div>
     <script src=public/js/index.js></script>
 </body>

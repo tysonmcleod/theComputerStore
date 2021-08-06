@@ -1,126 +1,149 @@
-*{
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* body */ 
+.body{
+  background: #f9f9f9;
+font-family: 'Courier New', monospace;
+}
+
+
+/* everything in container */
+
+.container{
+  height: 100%;
+  width: 960px;
+  height: 70%;
+  padding: 30px;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%; 
+}
+
+
+/* content */ 
+.column {
+  float: left;
+  width: 50%;
+  padding: 3%;
+  height: 300px;
+  flex: 1;
   
-  
-  body, html {
-    height: 100%;
-    background-color:#ffffff;
-    overflow: hidden;
-  }
-    
-    h1 {
-      color: rgb(0, 0, 0);
-      text-align: center;
-    }
-    
-    p {
-      font-family: verdana;
-      font-size: 20px;
-    }
-  
-  
-   /* Nav bar */
-  
-   #navigationbar{
-      height: 1%;
-      padding: 5%;
-      background-color: #f1f0f0;
-      margin-bottom: 5%;
-    
-   }
-  
-   /* container */
-  
-  #container{
+}
+
+.column h3 {
+  margin-bottom: 10px;
+  /* border: 2px solid black; */
+  background-color: #f9f9f9;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 4px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+
+div.imgCard {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-top: 3%;
+  border-radius: 7%;
+}
+
+div.laptopImgContainer {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+
+#laptopImg{
+  width: 30%;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row{
+  display: flex;
+}
+
+
+
+#navigationbar{ 
+  font-family: 'Courier New', monospace;
+  margin: 10px 0;
+text-transform: uppercase;
+font: 700 32px 'Comfortaa', sans-serif;
+letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+
+select {
+  margin-top: 10%;
+  margin-bottom: 30px;
+  width: 50%;
+  padding: 5%;
+  font-size: 12px;
+  border: 2px solid #000;
+  height: 25%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: auto;
+  background: #F9F9F9;
+  font-weight: 600;
+}
+
+
+#specs {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+
+#laptopPrice, #laptopDescription{
+  font-size: 12px;
+  font-weight: 600;
+  font-family: monospace;
+  margin-bottom: 5px;
+}
+
+#balance{
+  font-size: 42px;
+  font-weight: 600;
+  font-family: monospace;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+
+#pay, #debt{
+  font-size: 24px;
+  font-weight: 600;
+  font-family: monospace;
+  margin-top: 10%;
+  margin-bottom: 1%;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
     width: 100%;
-    height: 70%;
-    padding: 30px;
-    white-space:nowrap;
-    text-align:center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10%;  
+    height: fit-content;
   }
-  
-  
-  
-  /* content-top */
-  #content-top{
-    text-align: center;
-    border: 2px solid #000000;
-    margin-bottom: 3%;
-    margin-top: 3%;
-    height: 40%;
-    display: flex;
-    padding:1%;
+
+  .row {
+      display: block;
   }
-  
-  .box{
-    background-color: cadetblue;
-    width: 30%;
-    height: 50%;
-    display: inline-block;
-    margin: 10px 10px;
-    flex: 1;
-    border-radius: 5px;
-  }
-  
-  
-  
-   
-  /* Profile (left)*/
-  
-  #balance{
-    color:#0a2904;
-  }
-  
-  
-  
-  /* Laptops (right) */
-  
-  
-  
-  
-  /* Work / Bank (centre) */
-  
-  
-  
-  
-  
-  /* content-bottom */
-  #content-bottom{
-    text-align: center;
-    border: 2px solid #000000;
-    height: 40%;
-    width: auto;
-    padding-right: 50px;
-  }
-  
-  
-  .bigBox{
-    background-color: cadetblue;
-    width: 80%;
-    height: 50%;
-    display: inline-block;
-    margin: 10px 10px;
-    flex: 1;
-    border-radius: 5px;
-  }
-  
-  /* Laptop display*/
-  
-  #laptopImg{
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 10%;
-    height: 10%;
-   
-  }
-  
-  
+}
